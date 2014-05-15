@@ -1,0 +1,47 @@
+.custom{
+	background-image: url('/unit1_projects/images/background-textures-black-texture-paper.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+#header{
+	height: 50px;
+	width: 1500px;
+	margin: auto;
+	border: 2px solid black;
+	background-color: gray;
+	text-align: center;
+}
+.text{
+	height: 2500px;
+	width: 700px;
+	background-color:gray;
+	border: 3px dashed solid black;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+	float: center;
+}
+a:hover{
+	color:red;
+	font-weight: bold;
+	text-decoration:none; 
+}
+
+#main_wrap{
+	display: table;
+}
+#sidebar {
+	background-color: gray;
+	min-width: 200px;
+	min-height: 720px;
+	display: table-cell;
+	position: fixed;
+	float: left;
+}
+#footer{
+	bottom:0px;
+	background-color: gray;
+	text-align: center;
+	position: fixed;
+}
