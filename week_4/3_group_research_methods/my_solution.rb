@@ -49,12 +49,20 @@ end
 
 
 # Person 4
+
+
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+	source.each do |array|
+		if array.to_s.index(thing_to_delete).to_i > 0
+			source.delete(array) { "Nothing to delete" }
+		end
+	end
+	source
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+    source.delete(thing_to_delete) {"No need"}
+    source
 end
 
 # Identify and describe the ruby method you implemented. 
