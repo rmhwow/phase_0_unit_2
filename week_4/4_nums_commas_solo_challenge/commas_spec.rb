@@ -1,6 +1,11 @@
 require_relative "my_solution" 
 #=> Make sure you change this to the name of your code file! Save that file
 # into this repo. 
+#Driver Code
+separate_comma(1000)==1,000
+separate_comma(1000000)==1,000,000
+separate_comma(0)==0
+separate_comma(100)==100
 
 
 def random_num(min, max)
