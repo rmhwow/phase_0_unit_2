@@ -83,26 +83,17 @@ end
 
 # 3. Refactored Solution
 class Array
- 	def pad(min_num, pad_value=nil)
- 		new_array = Array.new(self)
- 		return new_array if new_array.length >= min_num
- 		else
-        (min_num - new_array.length).times do
-            new_array << pad_value
-		end
+    def pad!(min_size, pad_value = nil)
+        (min_size - self.length).times do self << pad_value
+        end
+        
+        self
     end
-    new_array
-end
-def pad!(min_num, pad_value=nil)
-    return self if self.length >= min_num
-    else
-    (min_num - self.length).times do
-        self << pad_value
+    
+    def pad(min_size, pad_value = nil)
+        self.dup.pad!(min_size, pad_value)
     end
-end
-self
-end
-end
+end﻿
 # WE tried to refactor lines 21, 22 by combining them into a single line "return new_array if array.length >=min_size" we tried similiar refactoring in lines 32 and 33.  When we edited, however, we came up with a bunch of errors. Therefor the only real big change we made was changing the argument "min_size to min_num
 
 # 4. Reflection
