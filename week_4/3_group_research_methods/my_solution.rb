@@ -5,7 +5,7 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
             "Annabelle" => 0, "Ditto" => 3}
 
 # Person 1's solution ##Arik's Code
-def my_array_finding_method(source, thing_to_find)
+=begin def my_array_finding_method(source, thing_to_find)
 	array = []
 	source.each do |x|
 		if x.include?(thing_to_find)
@@ -100,29 +100,26 @@ end
 # ascending from a-z or smallest-highest number
 # See above comments next to code to dive into details of how to apply sort under specific conditions
 
-
+=end
 
 # Person 4 #My Code (Morgan O'Leary)
 
 
 def my_array_deletion_method(source, thing_to_delete)
-	source.each do |array|
-		if array.to_s.index(thing_to_delete).to_i > 0
-			source.delete(array) { "Nothing to delete" }
-		end
-	end
-	source
+	source.delete_if{|a| a.to_s.include?(thing_to_delete)}
+		return source
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-    source.delete(thing_to_delete) {"No need"}
-    source
+    source.delete_if{|a,b| a.to_s.include?(thing_to_delete)}
+    return source
 end
 
+
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# I used the delete method and then the include method.
+# By using delete you're telling the source to delete what you need deleted if it's included in the string (that's why you have the array become a string)
+#the if is an if statement
 
 
 ################## DRIVER CODE ###################################
@@ -140,7 +137,7 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
+# this challenge was initally hard for me to figure out. Once I had more knowledge of methods it made more sense. I'm still shaky on this challenge, but hopefully it will get better! 
 # 
 # 
 # 
