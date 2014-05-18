@@ -12,8 +12,7 @@
 
 # 3. Initial Solution
 def essay(title,topic,date,fun_fact,thesis)
-print " My essay title is #{title}."
-print "I wanted to learn more about #{topic} and decided to write about #{topic}. #{topic} was most talked about in the year #{date}. #{fun_fact}. #{thesis}."
+    return " My essay title is #{title}. I wanted to learn more about #{topic} and decided to write about #{topic}. #{topic} was most talked about in the year #{date}. #{fun_fact}. #{thesis}."
 end
 
 

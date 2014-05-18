@@ -4,13 +4,25 @@ i_want_pets = ["I", "want", 3, "pets", "but", "I", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, 
             "Annabelle" => 0, "Ditto" => 3}
 
-# Person 1's solution
+# Person 1's solution ##Arik's Code
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+	array = []
+	source.each do |x|
+		if x.include?(thing_to_find)
+			array.push(x)
+		end
+	end
+	p array
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+	array = []
+	source.each do |key, value|
+		if value == thing_to_find
+			array.push(key)
+		end
+	end
+	p array
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -18,7 +30,7 @@ end
 #
 #
 
-# Person 2
+# Person 2 #Allison Reilly's Code
 def my_array_modification_method(source, thing_to_modify)
   # Your code here!
 end
@@ -33,22 +45,64 @@ end
 #
 
 
-# Person 3
+# Person 3 #Justin Harnoss Code
+
+# SORTING ARRAYS
+
+# Only calling .sort on the array will not work as the array contains strings and numbers
+# and they cannot be sorted at the same time with just sort. That's why we transform the numbers to
+# strings with .to_s as part of the sorting method
+
 def my_array_sorting_method(source)
-  # Your code here!
+    source.sort_by {|element| element.to_s}
 end
+
+# OR as an alternative:
+# This solution does not transform numbers into strings, but manages to sort w/o changing the numbers
+# It uses three additional methods to accomplish this:
+# .partition => seperates one array into two based on specified command
+# => combined with {|x| x.is_a? String} returns one array containing two arrays, one of them with all the strings, the other one with all the numbers
+# .map => transforms an array based on specified command
+# => combined with &:sort it thus "overwrites" the existing two arrays by sorting them in ascending order
+# .flatten => merges several arrays within one array into one joint array
+# => here, it starts with one array that contains two arrays and "flattens" it into one joint array
+
+def my_array_sorting_method(source)
+	source.partition{|x| x.is_a? String}.map(&:sort).flatten
+end
+
+
+# SORTING HASHES
+
+# The first part of {|key,value| ...} is always the same
+# The second part, in this case: {... [value, key] } is what needs to be specified to get the desired outcome
+# Just putting "value" would sort ascending by value, just putting key would sort ascending by key
+# This alone, would not work here, because we have hash elements that have the same key (=age)
+# So we want to tell ruby to - after sorting by value - it should sort by key
+# We do this by stating {... [value, key] }
 
 def my_hash_sorting_method(source)
-  # Your code here!
+    source.sort_by {|key,value| [value, key] }
 end
 
-# Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# OR as an alternative:
+# Look here to check out the logic (I can't explain it better than he has already...):
+# http://www.jypepin.com/posts/3
+
+def my_hash_sorting_method(source)
+    source.sort_by {|a,b| a[1] <=> b[1]] }
+end
+
+# Identify and describe the ruby method you implemented.
+# sort_by method:
+# Goes through all the elements of an array/hash and sorts them by the command specified in {}
+# If not further specificied just calling .sort on an array will return an array sorted
+# ascending from a-z or smallest-highest number
+# See above comments next to code to dive into details of how to apply sort under specific conditions
 
 
-# Person 4
+
+# Person 4 #My Code (Morgan O'Leary)
 
 
 def my_array_deletion_method(source, thing_to_delete)

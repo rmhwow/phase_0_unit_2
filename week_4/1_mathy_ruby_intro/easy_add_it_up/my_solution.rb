@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: John Berry ].
 
 # 1. Pseudocode
 
@@ -12,19 +12,19 @@
 # What is the output? (i.e. What should the code return?)
 # What are the steps needed to solve the problem?
 
-define a method called total
-define an argument that is an array
-define variable called sum and set it equal to zero
-iterate through the array (.each)
-add the sum to each element of the array
-return the sum of the array
+#define a method called total
+#define an argument that is an array
+#define variable called sum and set it equal to zero
+#iterate through the array (.each)
+#add the sum to each element of the array
+#return the sum of the array
 
-define a method called "sentence_maker"
-define a single argument (sentence)
-Combine the strings together using sentence.join
-add a space in between the words
-call capitalize to capitalize first word
-add "." to the string
+#define a method called "sentence_maker"
+#define a single argument (sentence)
+#Combine the strings together using sentence.join
+#add a space in between the words
+#call capitalize to capitalize first word
+#add "." to the string
 
 
 # 2. Initial Solution

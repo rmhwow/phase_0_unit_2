@@ -56,6 +56,7 @@
 #return the array
 
 # 2. Initial Solution
+
 class Array
  	def pad(min_size, pad_value=nil)
  		new_array = Array.new(self)
@@ -82,19 +83,12 @@ end
 
 
 # 3. Refactored Solution
-class Array
-    def pad!(min_size, pad_value = nil)
-        (min_size - self.length).times do self << pad_value
-        end
-        
-        self
-    end
-    
-    def pad(min_size, pad_value = nil)
-        self.dup.pad!(min_size, pad_value)
-    end
-end﻿
+
 # WE tried to refactor lines 21, 22 by combining them into a single line "return new_array if array.length >=min_size" we tried similiar refactoring in lines 32 and 33.  When we edited, however, we came up with a bunch of errors. Therefor the only real big change we made was changing the argument "min_size to min_num
 
 # 4. Reflection
 #I'm really glad I paired on this challenge. I learned that the return is implied on a lot of these things.   I definitely am starting to feel more confident with some of the concepts, but especially in using my terminal and reading through the errors. Through this challenge I also got more comfortable with the push through using << operator. Something we definitely struggled with was the self concept and getting the pad to be non destructive.  We figured with copying a new array that would fix the problem and it did.  We also struggled with refactoring. Things that I had seen in similiar problems wouldn't work for us in our refactoring.  We could have been using the wrong syntax, but it seemed like it was the same thing. Hopefully, when we get some reviews I can talk about it with other people.  Lauren and I were also wondering if there was certain format for pseudocoding.  Lauren contributed her pseudocode in a similiar format to actual code and I did mine more like reflecting.
+
+
+
+
