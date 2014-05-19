@@ -35,5 +35,7 @@ puts essay("Diet Coke","Diet Coke",1982,"Diet Coke does not use a modified form 
 
 
 # 5. Reflection 
+=begin At first i was really confused by the wording of this challenge because it seemed the concept was generally easy, but the summary included loops and .each and so on. I think I understand the skills pretty well and this was overall a fun challenge. 
+ =end
 
 
