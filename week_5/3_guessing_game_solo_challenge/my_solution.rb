@@ -13,11 +13,29 @@
 # 3. Initial Solution
 
 class GuessingGame
+    attr_accessor :answer
+    
   def initialize(answer)
-    # Your initialization code goes here
+    @answer=answer
+    @correct=false
   end
   
-  # Make sure you define the other required methods, too
+  def guess(guess)
+      if guess > @answer
+          @correct=false
+          return :high
+      elsif guess < @answer
+          @correct=false
+          return :low
+    else guess == @answer
+          @correct=true
+          return :correct
+      end
+  end
+  
+  def solved?
+@correct
+  end
 end
 
 

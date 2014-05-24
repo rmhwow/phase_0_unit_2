@@ -13,18 +13,28 @@
 # 3. Initial Solution
 
 class Die
-  def initialize(labels)
-  end
-
-  def sides
-  end
-
-  def roll
-  end
+    def initialize(labels)
+        if labels.empty? == true
+            raise ArgumentError.new("Labels List is empty")
+            else @sides =labels.length
+        end
+    end
+    
+    def sides
+        @sides
+    end
+    
+    def roll
+        if labels.length =1
+        labels[0]
+            else
+            puts labels
+            end
+    end
 end
 
-
-
+die = Die.new(['A', 'B', 'C', 'D', 'E', 'F','G', 'H', 'I'])
+puts die.roll
 # 4. Refactored Solution
 
 
@@ -39,4 +49,6 @@ end
 
 
 
-# 5. Reflection 
+# 5. Reflection
+#Things I still don't understand: why is it that sometimes you need to put the word "return" and other times it's just assumed? How do I know when or when not to write the word return.
+
