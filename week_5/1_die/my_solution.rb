@@ -1,13 +1,19 @@
 # U2.W5: Die Class 1: Numeric
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 
 # 2. Pseudocode
 
-# Input:
-# Output:
-# Steps:
+# Input: number
+# Output: random number
+# Steps: create method initialize and have it take the argument sides
+#set sides equal to an instance variable
+# if sides is less than one raise an Argument error
+#create method sides
+#have it return the number of sides
+# create method roll
+#have it return a random number between 1 and the amount of sides plugged in.
 
 
 # 3. Initial Solution
@@ -42,6 +48,7 @@ end
 
 #puts initialize(1) ==1
 #puts initialize(-1)== ArgumentError
+#puts initialize(0) ==Argument Error
 
 
 
