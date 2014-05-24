@@ -1,6 +1,6 @@
 # U2.W5: A Nested Array to Model a Boggle Boardh
 
-# I worked on this challenge [Allison, Morgan].
+# I worked on this challenge [Allison Reilly, Morgan O'Leary].
 
 boggle_board = [["b", "r", "a", "e"],
 ["i", "o", "d", "t"],
@@ -100,3 +100,4 @@ puts boggle_board[3][3] == "e"
 puts boggle_board[2][3] == "x"
 puts get_col(boggle_board,1)  ==  ["r", "o", "c", "a"]
 # Reflection
+#I really liked how this was broken up into different sections. It made the challenge seem a little less overwhelming. We initially struggled a bit with the column, but I think it really helped having two heads instead of one. We are also learning that when we don't know what to do next, we can head over to the ruby docs and see what is available to us. That's become a huge assest.  With this challenge I've become more secure in the .map method although intially Allison and I were wondering what the biggest differences between #each and #map.  I feel pretty confident in the learning competencies. 
