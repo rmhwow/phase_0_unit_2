@@ -117,6 +117,6 @@ p bakery_num(41, "cake") == "You need to make 0 pie(s), 6 cake(s), and 5 cookie(
 
 
 #  Reflection 
-
+#Oh my gosh we were doing so well in the beginning and then that last driver code made us realize we had a bunch of problems.  It was definitely confusing with this challenge because typically you have the require_relative with these challenges and in this case that really wasn't true. You needed to edit the bakery_challenge file. I should have looked there but I was so used to things being a certain way I didn't even think to check. So that was a sad realization later on. The figuring out what was going on was pretty easy it was making it simpler that was the challenge. I learned two new tricks I didn't know you could have the unless statement come after the ARgument Error all on one line and when you refractor you have have variables altogether and set them equal to 0 all on one line.  I'm glad this challenge came a little later, but it definitely helped to go through these concepts and then look back at other challenges and see how things could be applied better. 
 
 
