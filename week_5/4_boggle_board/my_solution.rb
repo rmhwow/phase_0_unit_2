@@ -52,7 +52,7 @@ end
 
 
 # Refactored Solution
-#
+#concise as is
 
 # DRIVER TESTS GO BELOW THIS LINE
 puts get_row(boggle_board,1) ==  ["i", "o", "d", "t"]
