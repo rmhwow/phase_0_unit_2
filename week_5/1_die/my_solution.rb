@@ -46,9 +46,10 @@ end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
-#puts initialize(1) ==1
-#puts initialize(-1)== ArgumentError
-#puts initialize(0) ==Argument Error
+die =Diew.new(6)
+puts die.sides ==6
+puts (1..6).include?(die.roll)
+
 
 
 

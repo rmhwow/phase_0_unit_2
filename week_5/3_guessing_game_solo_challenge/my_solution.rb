@@ -58,9 +58,14 @@ end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
-GuessingGame.guess(100) == :high
-GuessingGame.guess(10)== :correct
-GuessingGame.guess(5)==low
+practice = GuessingGame.new (10)
+
+p practice.solved? == false
+p practice.guess(5) == :low
+p practice.guess(35) == :high
+
+p practice.guess(10) == :correct
+p practice.solved? ==true 
 
 
 
